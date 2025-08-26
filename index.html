@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <p id="demo"></p>
+   <label for="score">please enter your score:</label>
+   <input type="number" name="score" id="num">
+   <button onclick="inc()">Grade</button>
+
+    <script>
+        let score=document.getElementById("num");
+        let demo=document.getElementById("demo");
+        let msg="";
+        function inc() {
+             if (score.value>=90) {
+                msg="Your Grade is:<b>A</b>"
+            } else if(score.value>=70){
+                msg="Your Grade is:<b>B</b>"
+            }else if(score.value>=50){
+                msg="Your Grade is:<b>C</b>"
+            }else{
+                msg="Your are failed"
+            }
+          demo.innerHTML=msg;  
+        }
+           
+        
+    </script>
+</body>
+</html>
